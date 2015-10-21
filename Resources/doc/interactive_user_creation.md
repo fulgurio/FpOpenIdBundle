@@ -90,7 +90,7 @@ use Acme\DemoBundle\Entity\User;
 
 use Fp\OpenIdBundle\RelyingParty\Exception\OpenIdAuthenticationCanceledException;
 use Fp\OpenIdBundle\RelyingParty\RecoveredFailureRelyingParty;
-use Fp\OpenIdBundle\Security\Core\Authentication\Token\OpenIdToken
+use Fp\OpenIdBundle\Security\Core\Authentication\Token\OpenIdToken;
 
 class SecurityController extends Controller
 {
@@ -147,7 +147,7 @@ class SecurityController extends Controller
 
         return $this->render('AcmeDemoBundle:Security:finishOpenIdLogin.html.twig', array(
             'form' => $form->createView()
-        );
+        ));
     }
 
     protected function buildUserForm(User $user)
@@ -169,4 +169,5 @@ class SecurityController extends Controller
     {
         return $this->get('fos_user.user_manager.default');
     }
+}
 ```
